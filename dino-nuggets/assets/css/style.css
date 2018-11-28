@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans";
+}
+
+.navbar {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+    background-color: hsl(197, 59%, 38%);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	z-index: 1;
+}
+
+.nav-title {
+	font-size: 30px;
+}
+
+.pull-left {
+	float: left;
+	margin: 5px 25% 5px 0%;
+}
+
+.pull-right {
+	float: right;
+	margin: 5px 0% 5px 15%;
+}
+
+.nav-element {
+	display: inline-block;
+	margin-left: 30px;
+}
+
+#big-image-container {
+	display: inline-block;
+	background: url(../img/dino.jpg) center center no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+	width: 100%;
+	height: 600px;
+	margin-top: 50px;
+}
+
+#big-image-text {
+	color: hsla(195, 86%, 4%, 1);
+	font-size: 50px;
+	margin-top: 200px;
+	margin-left: 100px;
+	padding-left: 20px;
+}
+
+.index-body {
+	margin: auto;
+	width: 50%;
+	position: relative;
+	display: inline-block;
+	margin: 50px 100px 50px 100px;
+	padding: 20px 20px 20px 20px;
+}
+
+.poem-container-1 {
+	position: relative;
+	display: block;
+	left: 10%;
+}
+
+.poem-container-2 {
+	position: relative;
+	display: block;
+	left: 70%;
+}
+
+.poem-image-right {
+	position: absolute;
+	left: 60%;
+	bottom: 75px;
+	display: inline;
+}
+
+.poem-image-left {
+	position: absolute;
+	left: -60%;
+	bottom: 75px;
+	display: inline;
+}
+
+.poem-block {
+	padding: 0px 0px 30px 0px;
+}
+
+.poem-line, .recipe-line {
+	padding: 0px 0px 10px 0px;
+}
+
+.title {
+	font-size: 24px;
+	margin-bottom: 30px;
+	margin-left: 60px;
+}
+
+#gallery {
+	text-align: center;
+}
+
+.recipe-box {
+	position: relative;
+	height: 300px;
+	width: 100%;
+	border: 2px solid #ccc;
+	padding: 24px;
+	display: block;
+	margin: 12px 0px 12px 20%;
+}
+
+.recipe-text {
+	position: absolute;
+	left: 50%;
+	display: inline-block;
+	text-align: left;
+}
+
+.recipe-img {
+	background-color: white;
+	height: 150px;
+	width: 150px;
+	border-radius: 200px;
+	display: inline-block;
+	position: relative;
+	right: 40%;
+}
+
+.recipe-title {
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.image-about {
+	position: absolute;
+	left: 80%;
+	top: 45px;
+	display: inline;
+}
+
+.poem-image-right:hover {
+	transform: rotate(30deg);
+}
+
+.poem-image-left:hover {
+	transform: rotate(-30deg);
+}
+
+.rotated { 
+	transform: rotate(360deg);
+	transition: transform 2s;
+}
