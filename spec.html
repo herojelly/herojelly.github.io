@@ -1,0 +1,76 @@
+
+<html>
+<body>
+
+<b><font size="+10">Devops Search Engine Spec</font></b>
+<br>
+<br>
+Your task is to go to the Devops Search Engine and perform analysis on the page views per site.
+<br>
+You will do this by writing a script that will create a .csv file with all the page titles and their corresponding views, and then open up this sheet in Excel.
+<br>
+<br>
+<br>
+
+<b><font size="+3">Part 1: Obtaining the webpage.</font></b>
+<br>
+First, create a folder on your computer for this exercise. Open up Sublime Text/Atom in this folder, then also navigate to this folder using your terminal window.
+<br>
+Next, go to the DevOps search engine page, located at this url: <a href=http://gregoryjerian.com/Test.html>Click here</a>. Find a way to download this page's source code into a file called temp_file, which you should make in your folder.
+<br>
+Hint: Look up the manual page for curl.
+<br>
+Hint 2: Look up the redirection operator >
+<br>
+<br>
+<br>
+<b><font size="+3">Part 2: Get just the lines we need from temp_file.</font></b>
+<br>
+Now that you have managed to download the source code, take a look at it. The data we want is 1) the page names, and 2) the number of views. However, you'll notice there's a lot of extraneous information, like all these weird HTML tags and whatnot. We need to clean this up.
+<br>
+The first thing we need to do is get just the lines we need. Find a way to take what's in temp_file, take only the three lines we want from it, and write it to a new file called answer2.
+<br>
+Hint: Look up the manual page for grep.
+<br>
+Hint 2: Look up the pipe operator |
+<br>
+Hint 3: Look up the manual page for cat.
+<br>
+<br>
+<br>
+<b><font size="+3">Part 3: Do some basic data cleaning.</font></b>
+<br>
+We have the only three lines that matter in answer2. Now we need to find a way to get 1) the page names, and 2) the number of views. The only problem is that the page names and number of views are different for each site, so it's hard to figure out how to filter them out. This leads to a great idea; maybe instead of filtering out what we want, we should filter out what we don't want.
+<br>
+The first thing we will do is notice that all the stuff between ( or open parentheses on each line is extraneous data. Let's figure out a way to write the contents of answer2 into a new file called answer3, which contains each line in answer2 except without the stuff between the open parentheses.
+<br>
+Hint: Look up the manual page for gawk. Pay attention to the -F tag.
+<br>
+Hint 2: Remember that passing an argument in curly braces {arg} will run arg as a shell program and pass in its output as an argument.
+<br>
+<br>
+<br>
+<b><font size="+3">Part 4: Do some more advanced data cleaning.</font></b>
+<br>
+We have something that kind of sort of looks like what we want in answer3. However, it would be nice to just have each article title followed by a comma followed by the view count for that article. We can clean further using string substitutions. Specifically, we're going to substitute everything we don't want with a space, so we get rid of it.
+<br>
+Look at answer3. You'll notice that every line has text that looks like this: <xmp></a>&nbsp;&nbsp;&nbsp;</xmp>. Replace all of these occurrences with nothing.
+<br>
+You'll also notice that every line has text that looks like this: <xmp>page views)<br></xmp>. Replace all of these occurrences with nothing. Link this and the previous part with a comma.
+<br>
+Write your final output into a csv file called output.csv.
+<br>
+Hint: Look up the manual page for sed. Use s* to represent a string you wish to keep; use ** to represent nothing.
+<br>
+<br>
+<br>
+<b><font size="+3">Part 5: Open the csv file.</font></b>
+<br>
+Find a way to open the csv file on your OS. In Windows, you can run <xmp>start excel output.csv</xmp>. Then, make some kind of graph or visualization.
+<br>
+<br>
+
+</body>
+</html>
+
+
