@@ -1,25 +1,50 @@
 <!doctype html>
-<html>
-	<head>
-        <title>Gregory Jerian - Home</title>
-	</head>
-	<body>
-		<h1>Gregory Jerian</h1>
-		<aside>Welcome to my website! Feel free to stay a while and take it all in.</aside>
-		<h3>Contact</h3>
-		<aside>gregoryjerian (at) berkeley (dot) edu</aside>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gregory Jerian | Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <span class="eyebrow">Gregory Jerian</span>
+          <h1>Welcome to my site!</h1>
+          <p class="hero-copy">Feel free to stay a while and take it all in.</p>
+        </div>
+        <nav class="site-nav">
+          <a href="./index.html" class="active">Home</a>
+          <a href="./fluff.html">Extras</a>
+        </nav>
+      </header>
 
-		<h3>Links</h3>
-		<ul>
-			<li><a href="./Resume.pdf">Resume</a></li>
-			<li><a href="https://www.linkedin.com/in/gregory-j-3a0172102/">LinkedIn</a></li>
-			<li><a href="https://github.com/herojelly">Github</a></li>
-		</ul>
+      <main>
+        <section class="intro-card intro-grid">
+          <div class="hero-copy-block">
+            <h2>Hi, I'm Greg.</h2>
+            <p>I'm a software engineer based in San Francisco, with a focus on datacenter infrastructure, monitoring and observability, and AI-powered solutions.</p>
+            <div class="quick-links">
+              <a class="button button-primary" href="./Resume.pdf" target="_blank">Resume</a>
+              <a class="button" href="https://www.linkedin.com/in/gregory-j-3a0172102/" target="_blank">LinkedIn</a>
+              <a class="button" href="https://github.com/herojelly" target="_blank">GitHub</a>
+            </div>
+          </div>
+          <figure class="hero-image">
+            <img src="./me.jpg" alt="Gregory Jerian portrait">
+          </figure>
+        </section>
 
-		<h3>Fluff</h3>
-		<ul>
-			<li><a href="./fluff.html">Fluff</a></li>
-		</ul>
+        <section class="intro-card">
+          <h2>Contact</h2>
+          <p>Reach out anytime at <a href="mailto:gregoryjerian@gmail.com">gregoryjerian@gmail.com</a>.</p>
+        </section>
+      </main>
 
-	</body>
+      <footer class="site-footer">
+        <p>© 2026 Gregory Jerian · <a href="mailto:gregoryjerian@gmail.com">gregoryjerian@gmail.com</a></p>
+      </footer>
+    </div>
+  </body>
 </html>
