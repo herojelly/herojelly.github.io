@@ -302,4 +302,11 @@ main {
   .feature {
     padding: 1.5rem;
   }
+
+  .hero-image {
+    width: min(170px, 54vw);
+    margin: 0 0 0.25rem;
+    justify-self: center;
+    order: -1;
+  }
 }
